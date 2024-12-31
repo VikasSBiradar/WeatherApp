@@ -1,0 +1,72 @@
+.app-container{
+    width:100vw;
+    height:100vh;
+    background-color: #d6d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container{
+    height : 85vh;
+    width:65vw;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container{
+    flex:3;
+    background-color: #ffffff;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.right-container{
+    flex:7;
+    background-color: #f6f6f8;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Center the loading spinner on the page */
+#loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+/* The spinner circle */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Styling for the text */
+#loading-spinner p {
+    font-size: 16px;
+    color: #3498db;
+    margin-top: 10px;
+}

@@ -1,0 +1,374 @@
+.right-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-nav-bar{
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+.nav-bar-tabs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top:10px;
+}
+
+.today{
+    margin-right: 10px;
+    color : #c5c5c5;
+}
+
+.week{
+    color : #c5c5c5;
+    margin-left : 5px;
+}
+
+.today:hover{
+    color:#1a1a1a;
+    cursor:pointer;
+}
+
+.week:hover{
+    color:#1a1a1a;
+    cursor:pointer;
+}
+
+.today-active{
+    color:#1a1a1a;
+}
+
+.week-active{
+    color:#1a1a1a;
+}
+
+.underline{
+    width: 36px;
+    height: 2px;
+    background-color: #1a1a1a;
+    margin-top: 1.3rem;
+}
+
+.underline-today{
+    transform: translate3d(-220%,0,0);
+    transition: 100ms;
+}
+
+.underline-week{
+    transform: translate3d(-95%,0,0);
+    transition: 100ms;
+}
+
+.nav-bar-metrics{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}
+
+.celsius{
+    border-radius: 500px;
+    padding:5px 7px 5px 7px;
+    color:#1a1a1a;
+    background-color: #ffffff;
+    font-size:small;
+}
+
+.celsius:hover{
+    color:#ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.celsius-active{
+    color:#ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.fahrenheit{
+    border-radius: 500px;
+    padding:5px 7px 5px 7px;
+    color:#1a1a1a;
+    background-color: #ffffff;
+    font-size:small;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+.fahrenheit:hover{
+    color:#ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.fahrenheit-active{
+    color:#ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.right-container-data-box{
+    flex:12;
+    display: flex;
+    flex-direction: column;
+    margin : 30px;
+    margin-top:10px;
+}
+
+.right-container-week-cards{
+    flex : 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width:85px;
+    height:95px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left:5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+}
+
+.card-day{
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.card-temp-img{
+    margin: 5px;
+}
+
+.card-temp-img img{
+    width:40px;
+    height:40px
+}
+
+.card-temp-img{
+    margin: 5px;
+}
+
+.card-temp-value{
+    margin:5px;
+}
+
+.right-container-today-cards{
+    flex : 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container-todays-highlight{
+    flex:3;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-todays-highlight-title{
+    flex:2;
+    margin-top: 30px;
+    /* margin-bottom:10px; */
+    font-size:small;
+    font-weight:bold;
+}
+
+.right-container-todays-highlight-cards{
+    flex:10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right-container-todays-highlight-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 200px;
+    height:140px;
+    align-items: center;
+    text-align: center;
+    margin-left:10px;
+}
+
+.right-container-todays-highlight-card-title{
+    flex:1;
+    color:#c9c9c9;
+    text-align: start;
+    font-size:12px;
+    font-weight: 600;
+    margin : 10px;
+    align-self: self-start;
+    margin-left: 10px;
+}
+
+.gauge{
+    margin-top: -20px;
+    flex:2;
+    width:70%;
+    max-width:180px;
+    font-size:32px;
+    color:#004033;
+    font-weight:500;
+}
+
+.gauge_body{
+    width:100%;
+    height:0;
+    padding-bottom: 50%;
+    background-color: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius:100% 200%;
+    overflow: hidden;
+    margin-top:1rem;
+}
+
+.gauge_fill{
+    position: absolute;
+    top : 100%;
+    left:0;
+    width:inherit;
+    height:100%;
+    background: #ffbf5e;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge_cover{
+    width:75%;
+    height:150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translateX(-50%);
+
+    /*Text*/
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #ffffff;
+
+}
+
+.right-container-todays-highlight-value{
+    flex:1;
+    font-size:35px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.wind-speed-value{
+    flex:2;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -10px;
+
+}
+
+.unit{
+    font-size: 15px;
+}
+
+.wind-status-logo{
+    flex:1;
+    align-self: self-start;
+    margin-left: 30px;
+}
+
+.wind-status-logo img{
+    height:30px;
+    width:30xp;
+}
+
+.right-container-todays-highlight-card-title-sunrise-sunset{
+    flex:1;
+    color:#c9c9c9;
+    text-align: start;
+    font-size:12px;
+    font-weight: 600;
+    margin : 10px;
+    align-self: self-start;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.sunrise-sunset-value{
+    flex:3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sunrise {
+    display: flex; /* Aligns children in a row (horizontal layout) */
+    align-items: center; /* Vertically centers items */
+    gap: 40px; /* Adds spacing between the icon and time */
+    margin-bottom:5px;
+}
+
+.sunrise-img {
+    flex: 0; /* Keeps the image size fixed and prevents it from stretching */
+}
+
+.sunrise-img img {
+    width: 35px; /* Set width of the image */
+    height: 35px; /* Set height of the image */
+}
+
+.sunrise-time {
+    font-size: 16px; /* Adjust the size of the time */
+    color: #333; /* Adjust the color of the text */
+}
+
+
+.sunset {
+    display: flex; /* Aligns children in a row (horizontal layout) */
+    align-items: center; /* Vertically centers items */
+    gap: 40px; /* Adds spacing between the icon and time */
+}
+
+.sunset-img {
+    flex: 0; /* Keeps the image size fixed and prevents it from stretching */
+}
+
+.sunset-img img {
+    width: 35px; /* Set width of the image */
+    height: 35px; /* Set height of the image */
+}
+
+.sunset-time {
+    font-size: 16px; /* Adjust the size of the time */
+    color: #333; /* Adjust the color of the text */
+}
+
+.humidity-summary{
+    font-size: small;
+    font-weight: 500;
+    margin-bottom:15px;
+}
