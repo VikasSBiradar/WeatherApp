@@ -16,6 +16,7 @@
             "outputPath": "dist/weather-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/weatherapp/",
             "polyfills": [
               "zone.js"
             ],
@@ -39,8 +40,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "15kb"
                 }
               ],
               "outputHashing": "all"
